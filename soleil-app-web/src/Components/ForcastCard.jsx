@@ -24,30 +24,38 @@ const ForcastCard = ({ information }) => {
                 <h2>{temp_around(Number(information.temp.day) - 273.15, 0)}°</h2>
               </div>
               <div className="sunrise">
-                <img src={icons.get("07d")} alt='temperature icon'></img>
+                <img src={icons.get("14d")} alt='temperature icon'></img>
                 <h2>{new Date(information.sunrise * 1000).getHours()}H{new Date(information.sunrise * 1000).getMinutes()}</h2>
               </div>
               <div className='sunset'>
-                <img src={icons.get("07d")} alt='temperature icon'></img>
+                <img src={icons.get("15d")} alt='temperature icon'></img>
                 <h2>{new Date(information.sunset * 1000).getHours()}H{new Date(information.sunset * 1000).getMinutes()}</h2>
               </div>
             </div>
             <div className="flip-card-back">
               <div className="humidity">
+                <h2>humidity: {information.humidity}</h2>
                 <img src={icons.get("05d")} alt='humidity icon'></img>
-                <h2>{information.humidity}</h2>
               </div>
               <div className="wind">
+                <h2>wind speed: {information.wind_speed}m/s</h2>
                 <img src={icons.get("06d")} alt='wind icon'></img>
-                <h2>{information.wind_speed}m/s</h2>
               </div>
               <div className="wind_direction">
-                <img src={icons.get("07d")} alt='wind direction icon'></img>
-                <h2>{getCompass(information.wind_deg)}</h2>
+                <h2>wind direction: {getCompass(information.wind_deg)}</h2>
               </div>
-              <h2>actual pressure: {information.pressure}hPa</h2>
-              <h2>astmosferic temp: {temp_around(Number(information.dew_point) - 273.15, 0)}°</h2>
-              <h2>clouds: {information.clouds}%</h2>
+              <div className="actual_pressure">
+                <img src={icons.get("16d")} alt='wind direction icon'></img>
+                <h2>atmospheric pressure: {information.pressure} hPa</h2>
+              </div>
+              <div className="temp">
+                <h2>temperature: {temp_around(Number(information.dew_point) - 273.15, 0)}</h2>
+                <img src={icons.get("12d")} alt='wind direction icon'></img>
+              </div>
+              <div className="clouds_percent">
+                <h2>cloud percentage: {information.clouds}%</h2>
+                <img src={icons.get("03d")} alt='wind direction icon'></img>
+              </div>
             </div>
           </div>
         </div>

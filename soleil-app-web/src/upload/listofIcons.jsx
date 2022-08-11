@@ -8,10 +8,15 @@ import snowy from './snowy.png'
 import humidity from './humidity.png'
 import wind from './autumn.png'
 import wind_direction from './compass.png'
+import sunrise from './sunrise.png'
+import sunset from './sunset.png'
+import temperature from './thermometer.png'
+import pressure from './pressure-gauge.png'
 
 const ListofIcons = (iconID) => {
     const icons = new Map([
         ["01d", sun],
+        ["01n", cloudy],
         ["02d", cloudy],
         ["03d", cloud],
         ["04d", cloud],
@@ -21,7 +26,11 @@ const ListofIcons = (iconID) => {
         ["09d", rain],
         ["10d", rainy],
         ["11d", lightning],
+        ["12d", temperature],
         ["13d", snowy],
+        ["14d", sunrise],
+        ["15d", sunset],
+        ["16d", pressure]
     ])
     return (icons);
 }

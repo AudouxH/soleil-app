@@ -2,8 +2,10 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(yellow, #2E86AB);
 }
 
 #locFrom {
@@ -12,27 +14,31 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 1px solid black;
-    margin-left: 30vw;
+    align-items: center;
 }
 
 #locFrom h1 {
     font-size: 250%;
     text-align: center;
+    color: #FFF;
 }
 
 #locFrom input {
     font-size: 150%;
-    width: 30vw;
-    height: 10vh;
-    margin-left: 5vw;
+    width: 400px;
+    height: 50px;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+#locFrom textarea:focus, #locFrom input:focus{
+    outline: none;
 }
 
 #locFrom button {
-    width: 10vw;
-    height: 5vh;
-    margin-left: 15vw;
-    border-radius: 30px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
 }
